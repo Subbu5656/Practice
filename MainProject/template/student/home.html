@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student</title>
+</head>
+{% if std.id %}
+<body>
+	<h1>Update Student Details</h1>
+	<form action="/student/update/{{std.id}}/" method="post">
+		{% csrf_token %}
+	  <label for="name">Name:</label>
+	  <input type="text" id="name" name="name" value="{{std.name}}"><br><br>
+	  <label for="section">Section:</label>
+	  <input type="text" id="section" name="section" value="{{std.section}}"><br><br>
+	  <label for="location">Location:</label>
+	  <input type="text" id="location" name="location" value="{{std.location}}"><br><br>
+	  <label for="marks">Marks:</label>
+	  <input type="text" id="marks" name="marks" value="{{std.marks}}"><br><br>
+	  <input type="submit" value="Update">
+	</form>
+</body>
+{% else %}
+<body>
+	<h1>New Student Details</h1>
+	<form action="/student/new/" method="post">
+		{% csrf_token %}
+	  <label for="name">Name:</label>
+	  <input type="text" id="name" name="name"><br><br>
+	  <label for="section">Section:</label>
+	  <input type="text" id="section" name="section"><br><br>
+	  <label for="location">Location:</label>
+	  <input type="text" id="location" name="location"><br><br>
+	  <label for="marks">Marks:</label>
+	  <input type="text" id="marks" name="marks"><br><br>
+	  <input type="submit" value="New">
+	</form>
+</body>
+{% endif %}
+</html>
