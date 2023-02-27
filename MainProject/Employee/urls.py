@@ -10,4 +10,5 @@ urlpatterns = [
     path('update/<id>/', views.Update, name='employee details update'),
     path('home/<id>/', views.Home1, name = 'employee details with id'),
     path('delete/<id>/', views.Delete, name='delete employee details'),
+    path('new/', views.New, name='new template'),
 ]

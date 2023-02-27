@@ -6,6 +6,9 @@ def Base(request):
 	msg = 'Welcome To My World'
 	return HttpResponse(msg)
 
+def New(request):
+	return render(request, 'employee/new.html')
+
 def Home(request):
 	return render(request, 'employee/home.html')
 
