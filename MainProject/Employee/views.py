@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from .models import Employee
 # Create your views here.
+def Base(request):
+	msg = 'Welcome To My World'
+	return HttpResponse(msg)
+
 def Home(request):
 	return render(request, 'employee/home.html')
 
