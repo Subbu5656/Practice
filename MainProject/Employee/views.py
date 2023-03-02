@@ -9,6 +9,8 @@ def Base(request):
 def Name(request):
 	msg = 'vivek site'
 	return HttpResponse(msg)
+def Vivek(request):
+	return render(request,'employee/vivek.html')
 
 def New(request):
 	return render(request, 'employee/new.html')

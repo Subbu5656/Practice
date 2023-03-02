@@ -4,6 +4,8 @@ from Employee import views
 urlpatterns = [
     path('home/', views.Home, name='home'),
     path('base/', views.Base, name='basic page'),
+    path('name/',views.Name, name='name page'),
+    path('vivek/',views.Vivek,name='vivek page'),
     path('main/', views.Main, name='main page'),
     path('save/', views.Save, name='save employee details'),
     path('details/', views.AllEmp, name='all employee details'),
